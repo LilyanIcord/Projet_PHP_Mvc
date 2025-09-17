@@ -19,17 +19,18 @@
         <div class="container">
             <h1>Gestion du personnel</h1>
             <div class="d-grid gap-2 d-md-block">
-                <a class="btn btn-primary" href="index.php?page=acceuil" role="button">acceuil</a>
+                <a class="btn btn-primary" href="index.php?page=accueil" role="button">Accueil</a>
+                <a class="btn btn-primary" href="index.php?page=saisieEmploye" role="button">Ajouter un employé</a>
 
-                <a class="btn btn-primary dropsown-toggle" href="#" role="button"
+                <a class="btn btn-primary dropdown-toggle" href="#" role="button"
                  data-bs-toggle="dropdown" aria-expanded="false">Liste des employés</a>
 
                  <ul class="dropdown-menu">
                     <?php
                     foreach ($this->data["lesServices"] as $unService)
                     {
-                        echo '<li><a class="dropdown" href="index.php?service='.
-                        $unService->GetCode().'$page=listeEmployes">'.
+                        echo '<li><a class="dropdown-item" href="index.php?service='.
+                        $unService->GetCode().'&page=listeEmployes">'.
                         $unService->GetDesignation().'</a></li>';
                     }
                     ?>

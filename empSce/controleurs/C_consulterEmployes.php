@@ -1,6 +1,6 @@
 <?php
 require_once "C_menu.php";
-require_once "modeles/M_Employe.php";
+require_once "modeles/M_service.php";
 require_once "modeles/M_employe.php";
 class C_consulterEmployes
 {

@@ -13,8 +13,8 @@ class M_employe extends M_generique
         $ligne=mysqli_fetch_assoc($res);
         while ($ligne)
         {
-            $Employe=new Employe( $ligne["emp_matricule"],$ligne["emp_nom"],$ligne["emp_prenom"],$ligne["emp_service"]);
-            $resultat[]=$Employe;
+            $employe=new Employe( $ligne["emp_matricule"],$ligne["emp_nom"],$ligne["emp_prenom"],$ligne["emp_service"]);
+            $resultat[]=$employe;
             $ligne=mysqli_fetch_assoc($res);
         }
         $this->deconnexion();
@@ -30,7 +30,7 @@ class M_employe extends M_generique
         $ligne=mysqli_fetch_assoc($res);
         while ($ligne)
         {
-            $Employe=new Employe( $ligne["emp_matricule"],$ligne["emp_nom"],$ligne["emp_prenom"],$ligne["emp_service"]);
+            $employe=new Employe( $ligne["emp_matricule"],$ligne["emp_nom"],$ligne["emp_prenom"],$ligne["emp_service"]);
             $resultat[]=$employe;
             $ligne=mysqli_fetch_assoc($res);
         }

@@ -27,10 +27,12 @@ class M_service extends M_generique{
         $ligne=mysqli_fetch_assoc($res);
         if ($ligne)
         {
-            $sce=new Service($ligne["sce_code"],$ligne["sce_designation"]);
-            $resultat=$service;
+            $sce=new Service( $ligne["sce_code"],$ligne["sce_designation"]);
+            $ligne=mysqli_fetch_assoc($res);
         }
         $this->deconnexion();
-        return $resultat;
+        return $sce;
     }
+
+    
 }
